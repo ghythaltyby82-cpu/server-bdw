@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إتمام الطلب - سيرفر البادية RP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-zinc-950 text-zinc-100 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl shadow-2xl w-full max-w-lg">
+        <h2 class="text-2xl font-extrabold text-amber-500 mb-6 text-center">📝 معلومات إتمام الطلب</h2>
+        
+        <form action="/process-checkout" method="POST" id="checkout-form" class="space-y-4">
+            <input type="hidden" name="cartItems" id="cart-items-input">
+            <input type="hidden" name="totalPrice" id="total-price-input">
+
+            <div>
+                <label class="block text-sm font-bold mb-2">الاسم الحقيقي:</label>
+                <input type="text" name="realName" required class="w-full bg-zinc-950 border border-zinc-800 rounded-lg p-3 text-white focus:border-amber-500 focus:outline-none">
+            </div>
+
+            <div>
+                <label class="block text-sm font-bold mb-2">يوزر الديسكورد:</label>
+                <input type="text" name="discordUser" required class="w-full bg-zinc-950 border border-zinc-800 rounded-lg p-3 text-white focus:border-amber-500 focus:outline-none" placeholder="example#0000">
+            </div>
+
+            <div>
+                <label class="block text-sm font-bold mb-2">رقم الجوال:</label>
+                <input type="text" name="phone" required class="w-full bg-zinc-950 border border-zinc-800 rounded-lg p-3 text-white focus:border-amber-500 focus:outline-none" placeholder="05xxxxxxxx">
+            </div>
+
+            <button type="submit" class="w-full bg-amber-600 hover:bg-amber-500 text-white font-bold py-3 rounded-lg transition mt-4">
+                الانتقال لصفحة الدفع 💳
+            </button>
+        </form>
+    </div>
+
+    <script>
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        document.getElementById('cart-items-input').value = JSON.stringify(cart);
+        
+        let total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        document.getElementById('total-price-input').value = total;
+
+        document.getElementById('checkout-form').addEventListener('submit', function() {
+            // مسح السلة بعد الانتقال للدفع إذا رغبت، أو إبقاؤها حتى تأكيد الإيصال
+        });
+    </script>
+</body>
+</html>

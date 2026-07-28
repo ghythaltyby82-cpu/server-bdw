@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قوانين السيرفر | 𝐁𝐚𝐝𝐢𝐲𝐚𝐡 𝐑𝐏</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <style>
+        body {
+            margin: 0; padding: 0; font-family: sans-serif; color: white;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), #2d1e0f), 
+                        url('https://i.postimg.cc/d1R0GFKG/3bb1b826-c37e-4fdc-b25c-1c3bbbddba6a.jpg');
+            background-size: cover; background-position: center; background-repeat: no-repeat;
+            background-attachment: fixed; min-height: 100vh;
+        }
+
+        .main-title {
+            color: #d97706;
+            text-align: center;
+            margin-top: 40px;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(217, 119, 6, 0.5);
+        }
+
+        /* تنسيق الأكورديون الرئيسي (القسم الرئيسي مثل قوانين FiveM) */
+        .main-accordion-item {
+            background-color: rgba(20, 12, 5, 0.95) !important;
+            border: 2px solid #d97706 !important;
+            margin-bottom: 20px;
+            border-radius: 12px !important;
+            overflow: hidden;
+        }
+
+        .main-accordion-button {
+            background-color: rgba(45, 30, 15, 0.95) !important;
+            color: #d97706 !important;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: right;
+            box-shadow: none !important;
+            padding: 18px 25px !important;
+        }
+
+        .main-accordion-button:not(.collapsed) {
+            background-color: #d97706 !important;
+            color: white !important;
+        }
+
+        .main-accordion-button::after {
+            filter: invert(1);
+        }
+
+        .main-accordion-button:not(.collapsed)::after {
+            filter: brightness(0) invert(1);
+        }
+
+        /* تنسيق الأكورديون الداخلي (البند وتفاصيله) */
+        .sub-accordion-item {
+            background-color: rgba(30, 20, 10, 0.9) !important;
+            border: 1px solid #d97706 !important;
+            margin-bottom: 10px;
+            border-radius: 8px !important;
+            overflow: hidden;
+        }
+
+        .sub-accordion-button {
+            background-color: rgba(45, 30, 15, 0.9) !important;
+            color: white !important;
+            font-weight: bold;
+            text-align: right;
+            box-shadow: none !important;
+            font-size: 15px;
+        }
+
+        .sub-accordion-button:not(.collapsed) {
+            color: #d97706 !important;
+            border-bottom: 1px solid #d97706;
+        }
+
+        .sub-accordion-button::after {
+            margin-left: 0;
+            margin-right: auto;
+            filter: invert(1);
+            transform: scale(0.8);
+        }
+
+        .accordion-body {
+            background-color: rgba(20, 12, 5, 0.95);
+            color: #ddd;
+            line-height: 1.8;
+            padding: 20px;
+        }
+
+        .sub-body {
+            background-color: rgba(15, 8, 3, 0.98);
+            color: #ccc;
+            padding: 15px 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container my-5" style="max-width: 900px;">
+    <h1 class="main-title mb-4">قوانين وأنظمة 𝐁𝐚𝐝𝐢𝐲𝐚𝐡 𝐑𝐏</h1>
+    <div class="text-center mb-4">
+        <a href="/" class="btn" style="background-color: #d97706; color: white; font-weight: bold;">العودة للرئيسية</a>
+    </div>
+
+    <!-- القائمة الكبرى الرئيسية للأقسام -->
+    <div class="accordion" id="masterAccordion">
+
+        <!-- 1. قوانين FiveM -->
+        <div class="accordion-item main-accordion-item">
+            <h2 class="accordion-header" id="headingFiveM">
+                <button class="accordion-button main-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFiveM" aria-expanded="false" aria-controls="collapseFiveM">
+                    قوانين FiveM
+                </button>
+            </h2>
+            <div id="collapseFiveM" class="accordion-collapse collapse" aria-labelledby="headingFiveM" data-bs-parent="#masterAccordion">
+                <div class="accordion-body">
+                    <div class="accordion" id="fivemAccordion">
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="f1"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cf1">البند الأول: الواقعية</button></h2>
+                            <div id="cf1" class="accordion-collapse collapse" data-bs-parent="#fivemAccordion"><div class="accordion-body sub-body">الواقعية هي أساس اللعب داخل السيرفر، ويجب أن تكون جميع التصرفات منطقية وتحاكي الواقع.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="f2"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cf2">البند الثاني: RDM</button></h2>
+                            <div id="cf2" class="accordion-collapse collapse" data-bs-parent="#fivemAccordion"><div class="accordion-body sub-body">يمنع قتل أي لاعب دون وجود سبب أو سيناريو رول بلاي واضح يبرر ذلك.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="f3"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cf3">البند الثالث: VDM</button></h2>
+                            <div id="cf3" class="accordion-collapse collapse" data-bs-parent="#fivemAccordion"><div class="accordion-body sub-body">يمنع استخدام المركبات كسلاح لدهس أو قتل اللاعبين دون مبرر واقعي.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="f4"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cf4">البند الرابع: MetaGaming</button></h2>
+                            <div id="cf4" class="accordion-collapse collapse" data-bs-parent="#fivemAccordion"><div class="accordion-body sub-body">يمنع استخدام أي معلومات حصلت عليها من خارج اللعبة داخل الرول بلاي.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="f5"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cf5">البند الخامس: PowerGaming</button></h2>
+                            <div id="cf5" class="accordion-collapse collapse" data-bs-parent="#fivemAccordion"><div class="accordion-body sub-body">يمنع القيام بأفعال غير واقعية أو فرض أحداث على اللاعبين دون منحهم فرصة للتفاعل.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="f6"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cf6">البند السادس: Combat Logging</button></h2>
+                            <div id="cf6" class="accordion-collapse collapse" data-bs-parent="#fivemAccordion"><div class="accordion-body sub-body">يمنع الخروج من السيرفر أثناء أي سيناريو أو ملاحقة أو تحقيق أو اشتباك بقصد الهروب من النتائج.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="f7"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cf7">البند السابع: Stream Sniping</button></h2>
+                            <div id="cf7" class="accordion-collapse collapse" data-bs-parent="#fivemAccordion"><div class="accordion-body sub-body">يمنع متابعة بثوث اللاعبين أو استخدام أي وسيلة خارجية لمعرفة أماكنهم أو معلوماتهم داخل اللعبة.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="f8"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cf8">البند الثامن: الغش</button></h2>
+                            <div id="cf8" class="accordion-collapse collapse" data-bs-parent="#fivemAccordion"><div class="accordion-body sub-body">يمنع استخدام أي برامج غش أو ماكرو أو مود أو أدوات تمنح أفضلية غير مشروعة، ويعد ذلك سببًا للعقوبات المشددة.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="f9"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cf9">البند التاسع: استغلال الثغرات</button></h2>
+                            <div id="cf9" class="accordion-collapse collapse" data-bs-parent="#fivemAccordion"><div class="accordion-body sub-body">يمنع استغلال أخطاء السيرفر أو السكربتات لتحقيق مكاسب، ويجب الإبلاغ عنها فورًا.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="f10"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cf10">البند العاشر: Fail RP</button></h2>
+                            <div id="cf10" class="accordion-collapse collapse" data-bs-parent="#fivemAccordion"><div class="accordion-body sub-body">يمنع أي تصرف يخالف الواقعية أو يكسر منطق الشخصية أو السيناريو.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="f11"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cf11">البند الحادي عشر: الاعتداء العشوائي</button></h2>
+                            <div id="cf11" class="accordion-collapse collapse" data-bs-parent="#fivemAccordion"><div class="accordion-body sub-body">يمنع الاعتداء أو إطلاق النار أو التهديد دون وجود سبب وسيناريو RP واضح.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="f12"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cf12">البند الثاني عشر: المناطق الآمنة</button></h2>
+                            <div id="cf12" class="accordion-collapse collapse" data-bs-parent="#fivemAccordion"><div class="accordion-body sub-body">يمنع تنفيذ أي أعمال إجرامية أو اعتداءات أو سرقات داخل المناطق الآمنة المحددة من الإدارة.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="f13"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cf13">البند الثالث عشر: استخدام المركبات</button></h2>
+                            <div id="cf13" class="accordion-collapse collapse" data-bs-parent="#fivemAccordion"><div class="accordion-body sub-body">يجب قيادة المركبات بطريقة واقعية، ويمنع استخدامها بطرق غير منطقية أو تنفيذ حركات مستحيلة.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="f14"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cf14">البند الرابع عشر: الخروج عن الشخصية</button></h2>
+                            <div id="cf14" class="accordion-collapse collapse" data-bs-parent="#fivemAccordion"><div class="accordion-body sub-body">يمنع التحدث خارج الشخصية أثناء السيناريو، ويجب المحافظة على تمثيل الدور طوال الوقت.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="f15"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cf15">البند الخامس عشر: التدخل في السيناريو</button></h2>
+                            <div id="cf15" class="accordion-collapse collapse" data-bs-parent="#fivemAccordion"><div class="accordion-body sub-body">يمنع التدخل في أي سيناريو قائم دون وجود سبب منطقي يبرر دخولك فيه.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="f16"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cf16">البند السادس عشر: الانتقام</button></h2>
+                            <div id="cf16" class="accordion-collapse collapse" data-bs-parent="#fivemAccordion"><div class="accordion-body sub-body">يمنع الانتقام من اللاعبين دون وجود مبرر أو تسلسل أحداث داخل الرول بلاي.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="f17"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cf17">البند السابع عشر: تعدد الشخصيات</button></h2>
+                            <div id="cf17" class="accordion-collapse collapse" data-bs-parent="#fivemAccordion"><div class="accordion-body sub-body">يمنع استغلال أكثر من شخصية للتأثير على نفس السيناريو أو نقل المعلومات بينها.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="f18"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cf18">البند الثامن عشر: احترام الإدارة</button></h2>
+                            <div id="cf18" class="accordion-collapse collapse" data-bs-parent="#fivemAccordion"><div class="accordion-body sub-body">يجب احترام جميع قرارات الإدارة والتعاون معها، وفي حال وجود اعتراض يتم تقديمه عبر التذاكر.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="f19"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cf19">البند التاسع عشر: التحايل على الأنظمة</button></h2>
+                            <div id="cf19" class="accordion-collapse collapse" data-bs-parent="#fivemAccordion"><div class="accordion-body sub-body">أي محاولة للتحايل على القوانين أو الأنظمة أو العقوبات تعرض صاحبها للعقوبات المناسبة.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="f20"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cf20">البند العشرون: هدف السيرفر</button></h2>
+                            <div id="cf20" class="accordion-collapse collapse" data-bs-parent="#fivemAccordion"><div class="accordion-body sub-body">يهدف 𝐁𝐚𝐝𝐢𝐲𝐚𝐡 𝐑𝐏 إلى تقديم تجربة رول بلاي سعودي واقعية تعتمد على الاحترافية والاحترام والتعاون بين جميع اللاعبين، وعلى الجميع المساهمة في الحفاظ على هذه البيئة.</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. قوانين ديسكورد -->
+        <div class="accordion-item main-accordion-item">
+            <h2 class="accordion-header" id="headingDiscord">
+                <button class="accordion-button main-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDiscord" aria-expanded="false" aria-controls="collapseDiscord">
+                    قوانين ديسكورد
+                </button>
+            </h2>
+            <div id="collapseDiscord" class="accordion-collapse collapse" aria-labelledby="headingDiscord" data-bs-parent="#masterAccordion">
+                <div class="accordion-body">
+                    <div class="accordion" id="discordAccordion">
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="d1"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cd1">البند الأول: احترام جميع الأعضاء</button></h2>
+                            <div id="cd1" class="accordion-collapse collapse" data-bs-parent="#discordAccordion"><div class="accordion-body sub-body">يجب التعامل مع جميع الأعضاء باحترام وأدب، ويمنع التقليل من أي شخص أو الإساءة إليه بأي شكل.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="d2"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cd2">البند الثاني: منع السب والشتم والعنصرية</button></h2>
+                            <div id="cd2" class="accordion-collapse collapse" data-bs-parent="#discordAccordion"><div class="accordion-body sub-body">يمنع استخدام الألفاظ المسيئة أو الشتم أو التمييز والعنصرية بجميع أشكالها سواء في المحادثات النصية أو الصوتية.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="d3"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cd3">البند الثالث: منع نشر الروابط دون إذن</button></h2>
+                            <div id="cd3" class="accordion-collapse collapse" data-bs-parent="#discordAccordion"><div class="accordion-body sub-body">لا يسمح بنشر روابط السيرفرات أو المواقع أو الدعوات إلا بعد الحصول على موافقة الإدارة.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="d4"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cd4">البند الرابع: منع الإزعاج والسبام</button></h2>
+                            <div id="cd4" class="accordion-collapse collapse" data-bs-parent="#discordAccordion"><div class="accordion-body sub-body">يمنع تكرار الرسائل أو المنشن المتكرر أو أي تصرف يسبب إزعاجًا للأعضاء.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="d5"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cd5">البند الخامس: منع انتحال شخصية الإدارة</button></h2>
+                            <div id="cd5" class="accordion-collapse collapse" data-bs-parent="#discordAccordion"><div class="accordion-body sub-body">يمنع ادعاء امتلاك رتبة إدارية أو تقليد أسماء وصور الإدارة بقصد التضليل.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="d6"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cd6">البند السادس: منع المحتوى المخالف</button></h2>
+                            <div id="cd6" class="accordion-collapse collapse" data-bs-parent="#discordAccordion"><div class="accordion-body sub-body">يمنع نشر أي محتوى يخالف الآداب العامة أو يتضمن ألفاظًا أو صورًا غير لائقة.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="d7"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cd7">البند السابع: منع بيع أو شراء الحسابات</button></h2>
+                            <div id="cd7" class="accordion-collapse collapse" data-bs-parent="#discordAccordion"><div class="accordion-body sub-body">يمنع بيع أو شراء أو تبادل الحسابات أو الشخصيات أو أي ممتلكات خارج الأنظمة المسموح بها.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="d8"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cd8">البند الثامن: منع استغلال الثغرات أو البوتات</button></h2>
+                            <div id="cd8" class="accordion-collapse collapse" data-bs-parent="#discordAccordion"><div class="accordion-body sub-body">يمنع استغلال أي خطأ أو ثغرة أو استخدام بوتات أو أدوات تمنح أفضلية غير عادلة.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="d9"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cd9">البند التاسع: التذاكر</button></h2>
+                            <div id="cd9" class="accordion-collapse collapse" data-bs-parent="#discordAccordion"><div class="accordion-body sub-body">يمنع فتح أكثر من تذكرة لنفس المشكلة، ويجب الانتظار حتى يتم الرد من الإدارة.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="d10"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cd10">البند العاشر: الالتزام بتعليمات الإدارة</button></h2>
+                            <div id="cd10" class="accordion-collapse collapse" data-bs-parent="#discordAccordion"><div class="accordion-body sub-body">يجب تنفيذ تعليمات الإدارة وعدم الاعتراض عليها داخل الرومات العامة، ومن لديه اعتراض يستخدم التذاكر.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="d11"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cd11">البند الحادي عشر: سرية التذاكر</button></h2>
+                            <div id="cd11" class="accordion-collapse collapse" data-bs-parent="#discordAccordion"><div class="accordion-body sub-body">يمنع نشر أو مشاركة أي محتوى أو صور أو معلومات خاصة بالتذاكر أو الأعمال الإدارية.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="d12"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cd12">البند الثاني عشر: الأسماء والصور</button></h2>
+                            <div id="cd12" class="accordion-collapse collapse" data-bs-parent="#discordAccordion"><div class="accordion-body sub-body">يجب أن يكون الاسم والصورة الشخصية لائقين، ويمنع استخدام أي اسم أو صورة مخالفة أو مسيئة.</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. قوانين المتجر -->
+        <div class="accordion-item main-accordion-item">
+            <h2 class="accordion-header" id="headingStore">
+                <button class="accordion-button main-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStore" aria-expanded="false" aria-controls="collapseStore">
+                    قوانين المتجر
+                </button>
+            </h2>
+            <div id="collapseStore" class="accordion-collapse collapse" aria-labelledby="headingStore" data-bs-parent="#masterAccordion">
+                <div class="accordion-body">
+                    <div class="accordion" id="storeAccordion">
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="s1"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cs1">البند الأول: الموافقة على القوانين</button></h2>
+                            <div id="cs1" class="accordion-collapse collapse" data-bs-parent="#storeAccordion"><div class="accordion-body sub-body">إتمام عملية الشراء يعني موافقتك الكاملة على جميع قوانين المتجر والسيرفر، ويلتزم المشتري بها دون استثناء.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="s2"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cs2">البند الثاني: عدم استرجاع المبالغ</button></h2>
+                            <div id="cs2" class="accordion-collapse collapse" data-bs-parent="#storeAccordion"><div class="accordion-body sub-body">جميع عمليات الشراء نهائية، ولا يمكن استرجاع المبلغ أو استبداله بعد تنفيذ الطلب، إلا في حال وجود خطأ من إدارة المتجر.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="s3"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cs3">البند الثالث: مدة التسليم</button></h2>
+                            <div id="cs3" class="accordion-collapse collapse" data-bs-parent="#storeAccordion"><div class="accordion-body sub-body">يتم تسليم المشتريات خلال المدة التي تحددها الإدارة، وقد تختلف بحسب ضغط الطلبات.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="s4"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cs4">البند الرابع: حظر الحساب</button></h2>
+                            <div id="cs4" class="accordion-collapse collapse" data-bs-parent="#storeAccordion"><div class="accordion-body sub-body">في حال تعرض حسابك للحظر بسبب مخالفة قوانين السيرفر، فلن يتم تعويضك عن أي منتجات أو مزايا قمت بشرائها.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="s5"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cs5">البند الخامس: إساءة استخدام المزايا</button></h2>
+                            <div id="cs5" class="accordion-collapse collapse" data-bs-parent="#storeAccordion"><div class="accordion-body sub-body">يمنع استغلال أي ميزة أو حزمة تم شراؤها بما يخالف قوانين السيرفر، وللإدارة الحق في سحبها دون تعويض.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="s6"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cs6">البند السادس: مشاركة المشتريات</button></h2>
+                            <div id="cs6" class="accordion-collapse collapse" data-bs-parent="#storeAccordion"><div class="accordion-body sub-body">جميع المشتريات مخصصة للحساب الذي تم شراؤها له، ويمنع نقلها أو بيعها أو مشاركتها مع أي شخص آخر إلا بموافقة الإدارة.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="s7"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cs7">البند السابع: الدفع</button></h2>
+                            <div id="cs7" class="accordion-collapse collapse" data-bs-parent="#storeAccordion"><div class="accordion-body sub-body">يجب التأكد من صحة بيانات الدفع قبل إتمام عملية الشراء، والإدارة غير مسؤولة عن أي خطأ ناتج عن إدخال بيانات غير صحيحة.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="s8"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cs8">البند الثامن: الاحتيال</button></h2>
+                            <div id="cs8" class="accordion-collapse collapse" data-bs-parent="#storeAccordion"><div class="accordion-body sub-body">أي محاولة للاحتيال أو استرجاع المبلغ من جهة الدفع بعد استلام المنتج (Chargeback) تعرض الحساب للحظر الدائم واتخاذ الإجراءات المناسبة.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="s9"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cs9">البند التاسع: تغيير الأسعار</button></h2>
+                            <div id="cs9" class="accordion-collapse collapse" data-bs-parent="#storeAccordion"><div class="accordion-body sub-body">تحتفظ إدارة 𝐁𝐚𝐝𝐢𝐲𝐚𝐡 𝐑𝐏 بحق تعديل الأسعار أو إضافة أو إزالة المنتجات في أي وقت دون إشعار مسبق، ولا يشمل ذلك المشتريات السابقة.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="s10"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cs10">البند العاشر: الدعم الفني</button></h2>
+                            <div id="cs10" class="accordion-collapse collapse" data-bs-parent="#storeAccordion"><div class="accordion-body sub-body">في حال واجهت أي مشكلة في استلام مشترياتك، يجب فتح تذكرة في قسم الدعم وعدم التواصل مع الإدارة عبر الرسائل الخاصة.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="s11"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cs11">البند الحادي عشر: سرية المعلومات</button></h2>
+                            <div id="cs11" class="accordion-collapse collapse" data-bs-parent="#storeAccordion"><div class="accordion-body sub-body">يلتزم المشتري بعدم مشاركة أي معلومات تخص المتجر أو طرق الدفع أو الإجراءات الداخلية مع أي طرف آخر.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="s12"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cs12">البند الثاني عشر: صلاحيات الإدارة</button></h2>
+                            <div id="cs12" class="accordion-collapse collapse" data-bs-parent="#storeAccordion"><div class="accordion-body sub-body">تحتفظ إدارة 𝐁𝐚𝐝𝐢𝐲𝐚𝐡 𝐑𝐏 بحق تعديل أو تحديث قوانين المتجر في أي وقت بما يخدم مصلحة السيرفر، ويعد استمرار استخدام المتجر موافقة على أي تحديثات جديدة.</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. قوانين الإجرام -->
+        <div class="accordion-item main-accordion-item">
+            <h2 class="accordion-header" id="headingCrime">
+                <button class="accordion-button main-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCrime" aria-expanded="false" aria-controls="collapseCrime">
+                    قوانين الإجرام
+                </button>
+            </h2>
+            <div id="collapseCrime" class="accordion-collapse collapse" aria-labelledby="headingCrime" data-bs-parent="#masterAccordion">
+                <div class="accordion-body">
+                    <div class="accordion" id="crimeAccordion">
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="cr1"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ccr1">البند الأول: الواقعية</button></h2>
+                            <div id="ccr1" class="accordion-collapse collapse" data-bs-parent="#crimeAccordion"><div class="accordion-body sub-body">يجب أن تكون جميع الأعمال الإجرامية مبنية على سيناريو واقعي ومقنع، ويمنع القيام بأي جريمة دون مبرر رول بلاي.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="cr2"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ccr2">البند الثاني: قيمة الحياة (Value of Life)</button></h2>
+                            <div id="ccr2" class="accordion-collapse collapse" data-bs-parent="#crimeAccordion"><div class="accordion-body sub-body">يجب على المجرم الحفاظ على حياته وحياة من معه، ويمنع الاستهتار بالحياة أو الدخول في مواجهات انتحارية دون مبرر.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="cr3"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ccr3">البند الثالث: إعلان النية</button></h2>
+                            <div id="ccr3" class="accordion-collapse collapse" data-bs-parent="#crimeAccordion"><div class="accordion-body sub-body">يمنع البدء بإطلاق النار أو الاعتداء مباشرة، ويجب وجود تفاعل RP واضح قبل أي عمل إجرامي.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="cr4"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ccr4">البند الرابع: الرهائن</button></h2>
+                            <div id="ccr4" class="accordion-collapse collapse" data-bs-parent="#crimeAccordion"><div class="accordion-body sub-body">يجب معاملة الرهائن بطريقة واقعية، ويمنع قتلهم أو إيذاؤهم دون سبب منطقي داخل السيناريو.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="cr5"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ccr5">البند الخامس: السرقات</button></h2>
+                            <div id="ccr5" class="accordion-collapse collapse" data-bs-parent="#crimeAccordion"><div class="accordion-body sub-body">يجب أن تتم جميع السرقات وفق الأنظمة المعتمدة في السيرفر، ويمنع استغلال الأخطاء أو تجاوز الأنظمة.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="cr6"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ccr6">البند السادس: إطلاق النار</button></h2>
+                            <div id="ccr6" class="accordion-collapse collapse" data-bs-parent="#crimeAccordion"><div class="accordion-body sub-body">لا يجوز إطلاق النار إلا عند وجود خطر حقيقي أو سبب RP واضح، ويمنع إطلاق النار العشوائي.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="cr7"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ccr7">البند السابع: المفاوضات</button></h2>
+                            <div id="ccr7" class="accordion-collapse collapse" data-bs-parent="#crimeAccordion"><div class="accordion-body sub-body">في حال وجود رهائن أو حصار أمني، يجب إعطاء فرصة للتفاوض قبل التصعيد متى كان ذلك منطقيًا.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="cr8"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ccr8">البند الثامن: استخدام الأسلحة</button></h2>
+                            <div id="ccr8" class="accordion-collapse collapse" data-bs-parent="#crimeAccordion"><div class="accordion-body sub-body">يمنع استخدام الأسلحة الثقيلة أو النادرة في الجرائم البسيطة، ويجب أن يتناسب السلاح مع نوع السيناريو.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="cr9"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ccr9">البند التاسع: الهروب</button></h2>
+                            <div id="ccr9" class="accordion-collapse collapse" data-bs-parent="#crimeAccordion"><div class="accordion-body sub-body">يسمح بمحاولة الهروب من الجهات الأمنية، بشرط أن تكون بطريقة واقعية ودون استغلال للثغرات أو القيادة غير المنطقية.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="cr10"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ccr10">البند العاشر: التعاون الإجرامي</button></h2>
+                            <div id="ccr10" class="accordion-collapse collapse" data-bs-parent="#crimeAccordion"><div class="accordion-body sub-body">يسمح بالتعاون بين أفراد العصابة أو المجموعة الإجرامية، بشرط عدم تجاوز الحد الأقصى المسموح به من الإدارة.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="cr11"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ccr11">البند الحادي عشر: المناطق الآمنة</button></h2>
+                            <div id="ccr11" class="accordion-collapse collapse" data-bs-parent="#crimeAccordion"><div class="accordion-body sub-body">يمنع تنفيذ أي نشاط إجرامي داخل المناطق الآمنة التي تحددها إدارة السيرفر.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="cr12"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ccr12">البند الثاني عشر: العودة للسيناريو</button></h2>
+                            <div id="ccr12" class="accordion-collapse collapse" data-bs-parent="#crimeAccordion"><div class="accordion-body sub-body">في حال تمكنت من الهروب وانتهى السيناريو، يمنع العودة للانتقام أو استكماله دون وجود سبب RP جديد.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="cr13"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ccr13">البند الثالث عشر: الخطف</button></h2>
+                            <div id="ccr13" class="accordion-collapse collapse" data-bs-parent="#crimeAccordion"><div class="accordion-body sub-body">يسمح بالخطف إذا وجد سبب RP واضح، ويمنع خطف اللاعبين بشكل عشوائي أو بهدف التخريب فقط.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="cr14"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ccr14">البند الرابع عشر: طلب الفدية</button></h2>
+                            <div id="ccr14" class="accordion-collapse collapse" data-bs-parent="#crimeAccordion"><div class="accordion-body sub-body">يجب أن تكون قيمة الفدية منطقية ومناسبة للسيناريو، ويمنع طلب مبالغ مبالغ فيها أو غير واقعية.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="cr15"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ccr15">البند الخامس عشر: الاعتداء على المدنيين</button></h2>
+                            <div id="ccr15" class="accordion-collapse collapse" data-bs-parent="#crimeAccordion"><div class="accordion-body sub-body">يمنع الاعتداء على المدنيين أو قتلهم أو خطفهم دون وجود سبب مقنع داخل الرول بلاي.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="cr16"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ccr16">البند السادس عشر: استخدام المركبات</button></h2>
+                            <div id="ccr16" class="accordion-collapse collapse" data-bs-parent="#crimeAccordion"><div class="accordion-body sub-body">يمنع استخدام المركبات لصدم اللاعبين أو إيقافهم بالقوة بطريقة غير واقعية.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="cr17"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ccr17">البند السابع عشر: الاحترام أثناء السيناريو</button></h2>
+                            <div id="ccr17" class="accordion-collapse collapse" data-bs-parent="#crimeAccordion"><div class="accordion-body sub-body">يمنع الخروج عن الشخصية أو التلفظ بألفاظ خارجة أو إثارة المشاكل خارج إطار الرول بلاي أثناء السيناريو.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="cr18"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ccr18">البند الثامن عشر: استغلال الثغرات</button></h2>
+                            <div id="ccr18" class="accordion-collapse collapse" data-bs-parent="#crimeAccordion"><div class="accordion-body sub-body">يمنع استغلال أي ثغرة أو خلل في السكربتات أو الخرائط للحصول على أفضلية أثناء الأعمال الإجرامية.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="cr19"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ccr19">البند التاسع عشر: تدخل الأطراف الخارجية</button></h2>
+                            <div id="ccr19" class="accordion-collapse collapse" data-bs-parent="#crimeAccordion"><div class="accordion-body sub-body">يمنع تدخل أي لاعب في سيناريو إجرامي قائم ما لم يكن لديه سبب RP واضح ومباشر يبرر تدخله.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="cr20"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ccr20">البند العشرون: صلاحيات الإدارة</button></h2>
+                            <div id="ccr20" class="accordion-collapse collapse" data-bs-parent="#crimeAccordion"><div class="accordion-body sub-body">يحق للإدارة إيقاف أي سيناريو إجرامي أو تعديله أو إنهائه إذا رأت أنه يخالف قوانين السيرفر أو يضر بتجربة اللاعبين.</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. قوانين العسكرية -->
+        <div class="accordion-item main-accordion-item">
+            <h2 class="accordion-header" id="headingMilitary">
+                <button class="accordion-button main-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMilitary" aria-expanded="false" aria-controls="collapseMilitary">
+                    قوانين العسكرية
+                </button>
+            </h2>
+            <div id="collapseMilitary" class="accordion-collapse collapse" aria-labelledby="headingMilitary" data-bs-parent="#masterAccordion">
+                <div class="accordion-body">
+                    <div class="accordion" id="militaryAccordion">
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="m1"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cm1">البند الأول: احترام الرتب العسكرية</button></h2>
+                            <div id="cm1" class="accordion-collapse collapse" data-bs-parent="#militaryAccordion"><div class="accordion-body sub-body">يجب على جميع العسكريين احترام التسلسل القيادي وتنفيذ أوامر الرتب الأعلى، ما لم تخالف قوانين السيرفر أو تعليمات الإدارة.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="m2"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cm2">البند الثاني: الالتزام بالزي الرسمي</button></h2>
+                            <div id="cm2" class="accordion-collapse collapse" data-bs-parent="#militaryAccordion"><div class="accordion-body sub-body">يجب ارتداء الزي الرسمي المعتمد للجهة العسكرية أثناء تأدية المهام، ويمنع استخدام أي زي غير مصرح به.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="m3"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cm3">البند الثالث: استخدام المركبات الرسمية</button></h2>
+                            <div id="cm3" class="accordion-collapse collapse" data-bs-parent="#militaryAccordion"><div class="accordion-body sub-body">تستخدم المركبات الحكومية في المهام الرسمية فقط، ويمنع استخدامها لأغراض شخصية أو خارج نطاق العمل.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="m4"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cm4">البند الرابع: استخدام الأسلحة</button></h2>
+                            <div id="cm4" class="accordion-collapse collapse" data-bs-parent="#militaryAccordion"><div class="accordion-body sub-body">يمنع استخدام السلاح دون مبرر نظامي أو خطر حقيقي، ويجب مراعاة سلامة المدنيين أثناء التعامل مع أي حالة.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="m5"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cm5">البند الخامس: التعامل مع المدنيين</button></h2>
+                            <div id="cm5" class="accordion-collapse collapse" data-bs-parent="#militaryAccordion"><div class="accordion-body sub-body">يجب التعامل مع جميع المدنيين باحترام ومهنية، ويمنع إساءة استخدام السلطة أو الاعتداء عليهم دون مبرر نظامي.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="m6"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cm6">البند السادس: أوامر التوقيف</button></h2>
+                            <div id="cm6" class="accordion-collapse collapse" data-bs-parent="#militaryAccordion"><div class="accordion-body sub-body">يجب إعطاء المشتبه به فرصة للاستسلام والامتثال قبل استخدام القوة، متى ما سمحت الحالة بذلك.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="m7"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cm7">البند السابع: استخدام القوة</button></h2>
+                            <div id="cm7" class="accordion-collapse collapse" data-bs-parent="#militaryAccordion"><div class="accordion-body sub-body">يجب أن يكون استخدام القوة متدرجًا ومتناسبًا مع مستوى التهديد، ويمنع استخدام القوة المفرطة.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="m8"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cm8">البند الثامن: المطاردات</button></h2>
+                            <div id="cm8" class="accordion-collapse collapse" data-bs-parent="#militaryAccordion"><div class="accordion-body sub-body">يجب أن تتم المطاردات بطريقة واقعية، مع مراعاة سلامة مستخدمي الطريق وعدم تعريض المدنيين للخطر دون ضرورة.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="m9"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cm9">البند التاسع: إطلاق النار</button></h2>
+                            <div id="cm9" class="accordion-collapse collapse" data-bs-parent="#militaryAccordion"><div class="accordion-body sub-body">لا يجوز إطلاق النار إلا عند وجود تهديد مباشر على حياة العسكري أو المدنيين أو وفق ما يقتضيه السيناريو.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="m10"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cm10">البند العاشر: التفتيش والقبض</button></h2>
+                            <div id="cm10" class="accordion-collapse collapse" data-bs-parent="#militaryAccordion"><div class="accordion-body sub-body">يجب وجود سبب نظامي أو اشتباه منطقي قبل تفتيش الأشخاص أو المركبات أو تنفيذ عملية القبض.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="m11"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cm11">البند الحادي عشر: المداهمات</button></h2>
+                            <div id="cm11" class="accordion-collapse collapse" data-bs-parent="#militaryAccordion"><div class="accordion-body sub-body">لا يجوز تنفيذ أي مداهمة إلا وفق الإجراءات المعتمدة داخل السيرفر، وبالتنسيق مع القوة المشاركة.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="m12"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cm12">البند الثاني عشر: إساءة استخدام الصلاحيات</button></h2>
+                            <div id="cm12" class="accordion-collapse collapse" data-bs-parent="#militaryAccordion"><div class="accordion-body sub-body">يمنع استغلال الصلاحيات العسكرية لتحقيق مصالح شخصية أو الانتقام أو مضايقة اللاعبين.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="m13"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cm13">البند الثالث عشر: التواصل اللاسلكي</button></h2>
+                            <div id="cm13" class="accordion-collapse collapse" data-bs-parent="#militaryAccordion"><div class="accordion-body sub-body">يجب استخدام أجهزة الاتصال الرسمية بشكل مهني، ويمنع العبث أو إزعاج بقية الوحدات.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="m14"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cm14">البند الرابع عشر: المحافظة على الممتلكات الحكومية</button></h2>
+                            <div id="cm14" class="accordion-collapse collapse" data-bs-parent="#militaryAccordion"><div class="accordion-body sub-body">يجب المحافظة على جميع المركبات والمعدات والأسلحة الحكومية، ويمنع إهمالها أو إساءة استخدامها.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="m15"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cm15">البند الخامس عشر: سرية المعلومات</button></h2>
+                            <div id="cm15" class="accordion-collapse collapse" data-bs-parent="#militaryAccordion"><div class="accordion-body sub-body">تعد المعلومات الأمنية والعسكرية سرية، ويمنع مشاركتها مع أي جهة أو شخص غير مخول.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="m16"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cm16">البند السادس عشر: الخروج عن الشخصية</button></h2>
+                            <div id="cm16" class="accordion-collapse collapse" data-bs-parent="#militaryAccordion"><div class="accordion-body sub-body">يمنع كسر الرول بلاي أو التحدث خارج الشخصية أثناء أداء المهام العسكرية.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="m17"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cm17">البند السابع عشر: احترام قرارات القيادة</button></h2>
+                            <div id="cm17" class="accordion-collapse collapse" data-bs-parent="#militaryAccordion"><div class="accordion-body sub-body">يلتزم جميع العسكريين بقرارات القيادة والإدارة، وفي حال وجود اعتراض يتم رفعه عبر القنوات الرسمية.</div></div>
+                        </div>
+                        <div class="accordion-item sub-accordion-item">
+                            <h2 class="accordion-header" id="m18"><button class="accordion-button sub-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cm18">البند الثامن عشر: العقوبات</button></h2>
+                            <div id="cm18" class="accordion-collapse collapse" data-bs-parent="#militaryAccordion"><div class="accordion-body sub-body">أي مخالفة لهذه القوانين تعرض العسكري للمساءلة الإدارية، وقد تصل العقوبة إلى الفصل من الجهة أو اتخاذ الإجراءات المناسبة من إدارة السيرفر.</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer style="text-align: center; margin-top: 50px; margin-bottom: 30px; color: #fff;">
+    <p>جميع الحقوق محفوظة © 2026 البـــادية رول بــــلاي</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

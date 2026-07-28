@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝐁𝐚𝐝𝐢𝐲𝐚𝐡 𝐑𝐏 | الرئيسية</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <style>
+        body {
+            margin: 0; padding: 0; font-family: sans-serif; color: white;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), #2d1e0f), 
+                        url('https://i.postimg.cc/tCDFFm99/85e38e15-0b5e-4992-91f4-243974a2365f.jpg');
+            background-size: cover; background-position: center; background-repeat: no-repeat;
+            background-attachment: fixed; min-height: 100vh;
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-bottom: 2px solid #d97706;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .nav-links { display: flex; gap: 15px; align-items: center; flex-wrap: wrap; }
+        
+        .logo-center {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-btn {
+            background-color: #020205;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            border: 1px solid #d97706;
+            font-size: 14px;
+        }
+        .nav-btn:hover { background-color: #1a1a1a; color: white; }
+
+        .bg-dark-custom { background-color: rgba(45, 30, 15, 0.8) !important; border: 1px solid #d97706 !important; }
+        
+        .glowing-text {
+            font-size: 75px; color: #f68707d0;
+            text-shadow: 0 0 10px #c86106, 0 0 20px #9e4b03, 0 0 30px #0a0704;
+            animation: glow 2s infinite alternate; margin: 0;
+        }
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #f68707d0, 0 0 20px #f68707d0, 0 0 30px #f68707d0; }
+            to { text-shadow: 0 0 20px #f68707d0, 0 0 40px #f68707d0, 0 0 60px #f68707d0; }
+        }
+        .sub-text { font-size: 24px; color: #ff8800; margin-top: 15px; opacity: 0.9; }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="nav-links">
+        <% if (!user) { %>
+            <a href="/login" class="nav-btn">تسجيل الدخول بالديسكورد</a>
+        <% } else { %>
+            <a href="#" class="nav-btn" style="background-color: #1e293b;">مرحباً، <%= user.username %></a>
+        <% } %>
+        <a href="/store" class="nav-btn">المتجر</a>
+        <a href="/rules" class="nav-btn">القوانين</a>
+        <a href="/constitution" class="nav-btn">الدستور</a>
+        <a href="/news" class="nav-btn">الأخبار</a>
+        <a href="/applications" class="nav-btn">التقديمات</a>
+        <!-- زر لوحة التحكم يظهر فقط لمن يمتلك رتبة الإدارة -->
+        <% if (typeof locals !== 'undefined' && locals.isAdmin && isAdmin) { %>
+            <a href="/admin" class="nav-btn" style="background-color: #d97706; font-weight: bold;">لوحة التحكم</a>
+        <% } %>
+    </div>
+    <img src="https://i.postimg.cc/wMjcKP36/846c769f-65a2-4fc4-b94e-ecff458f2445.png" alt="Logo" class="logo-center">
+    <div style="color: white; font-weight: bold; font-size: 18px;">Badiyah RP</div>
+</div>
+
+<div style="text-align: center; margin-top: 50px;">
+    <h1 class="glowing-text">𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐭𝐨 𝐁𝐚𝐝𝐢𝐲𝐚𝐡 𝐑𝐏</h1>
+    <p class="sub-text">سيرفر البادية رول بلاي عربي احترافي</p>
+    <div class="mt-4">
+        <!-- تم تعديل الرابط هنا ليوجه إلى مسار التفعيل المطلوب -->
+        <a href="/apply-activation" style="color: #d97706; text-decoration: none; font-weight: bold; border: 2px solid #d97706; padding: 12px 40px; border-radius: 8px; font-size: 22px; display: inline-block; margin-top: 10px; transition: 0.3s;">
+            انضم للبادية
+        </a>
+    </div>
+</div>
+
+<!-- قسم الإحصائيات -->
+<div class="container my-5">
+    <div class="row text-center justify-content-center">
+        <!-- 1. عدد الذين اختبروا -->
+        <div class="col-md-3 mb-3">
+            <div class="p-3 bg-dark-custom rounded border border-warning">
+                <h5>عدد المتقدمين</h5>
+                <h2 style="color: #d97706;"><%= stats.applicantsCount %></h2>
+            </div>
+        </div>
+        <!-- 2. المتصلين حالياً -->
+        <div class="col-md-3 mb-3">
+            <div class="p-3 bg-dark-custom rounded border border-warning">
+                <h5>المتصلين حالياً</h5>
+                <h2 style="color: #d97706;"><%= stats.onlineMembers %></h2>
+            </div>
+        </div>
+        <!-- 3. العدد الكلي -->
+        <div class="col-md-3 mb-3">
+            <div class="p-3 bg-dark-custom rounded border border-warning">
+                <h5>عدد الأعضاء</h5>
+                <h2 style="color: #d97706;"><%= stats.totalMembers %></h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer style="text-align: center; margin-top: 160px; margin-bottom: 80px; font-size: 16px; color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 15px;">
+    <a href="/contact" style="color: #d97706; text-decoration: none; font-weight: bold; border: 1px solid #d97706; padding: 5px 25px; border-radius: 5px;">
+        تواصل معنا
+    </a>
+    <p style="margin: 0;">جميع الحقوق محفوظة © 2026 البـــادية رول بــــلاي</p>
+</footer>
+</body>
+</html>
