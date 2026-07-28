@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم | الإدارة</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <style>
+        body { background-color: #000000; color: #fff; font-family: sans-serif; }
+        .card { background-color: #000000; border: 1px solid #d97706; border-radius: 10px; margin-bottom: 20px; }
+        .btn-warning { background-color: #d97706; border: none; color: white; }
+        .btn-warning:hover { background-color: #b45309; color: white; }
+    </style>
+</head>
+<body class="p-4">
+
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 style="color: #d97706;">لوحة تحكم الإدارة والمشرفين</h1>
+        <a href="/" class="btn btn-outline-light">العودة للرئيسية</a>
+    </div>
+
+    <% if (message) { %>
+        <div class="alert alert-success text-center"><%= message %></div>
+    <% } %>
+
+    <div class="row">
+        <!-- إضافة خبر جديد -->
+        <div class="col-md-6 mb-4">
+            <div class="card p-4 h-100">
+                <h3 class="mb-3 text-warning">إضافة خبر جديد</h3>
+                <form action="/admin/add-news" method="POST">
+                    <div class="mb-3">
+                        <label class="form-label">عنوان الخبر</label>
+                        <input type="text" name="title" class="form-control bg-dark text-white border-warning" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">محتوى الخبر</label>
+                        <textarea name="content" class="form-control bg-dark text-white border-warning" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-warning w-100">نشر الخبر</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- إضافة منتج للمتجر -->
+        <div class="col-md-6 mb-4">
+            <div class="card p-4 h-100">
+                <h3 class="mb-3 text-warning">إضافة منتج للمتجر</h3>
+                <form action="/admin/add-product" method="POST">
+                    <div class="mb-3">
+                        <label class="form-label">اسم المنتج</label>
+                        <input type="text" name="name" class="form-control bg-dark text-white border-warning" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">السعر</label>
+                        <input type="text" name="price" class="form-control bg-dark text-white border-warning" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">وصف المنتج</label>
+                        <input type="text" name="description" class="form-control bg-dark text-white border-warning" required>
+                    </div>
+                    <button type="submit" class="btn btn-warning w-100">إضافة المنتج</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- قسم طلبات التفعيل المستقل -->
+    <div class="admin-section" style="background: #1e1e1e; padding: 20px; border-radius: 10px; border: 1px solid #d97706; margin-bottom: 30px;">
+        <h3 style="color: #d97706; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+            🛡️ قائمة طلبات التفعيل (السيناريو والقوانين)
+        </h3>
+
+        <% if (activationSubmissions && Object.keys(activationSubmissions).length > 0) { %>
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <% Object.values(activationSubmissions).forEach(sub => { %>
+                    <div style="background: #121212; border: 1px solid #333; border-radius: 8px; padding: 15px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #2a2a2a; padding-bottom: 10px; margin-bottom: 15px;">
+                            <div>
+                                <span style="color: #fff; font-weight: bold; font-size: 1.1rem;"><%= sub.username %></span>
+                                <span style="color: #888; font-size: 0.9rem; margin-right: 10px;" dir="ltr">(ID: <%= sub.discordId %>)</span>
+                            </div>
+                            <div>
+                                <span style="background: <%= sub.status === 'مقبول' ? '#065f46' : (sub.status === 'مرفوض' ? '#991b1b' : '#92400e') %>; color: #fff; padding: 4px 12px; border-radius: 4px; font-size: 0.85rem;">
+                                    <%= sub.status %>
+                                </span>
+                                <span style="color: #aaa; font-size: 0.85rem; margin-right: 10px;"><%= sub.date %></span>
+                            </div>
+                        </div>
+
+                        <!-- عرض الأسئلة والإجابات بشكل منظم -->
+                        <div style="margin-bottom: 15px;">
+                            <h4 style="color: #d97706; font-size: 0.95rem; margin-bottom: 10px;">إجابات اختبار القوانين والسيناريو:</h4>
+                            <div style="display: flex; flex-direction: column; gap: 8px; background: #181818; padding: 10px; border-radius: 6px;">
+                                <% if (sub.answers && typeof sub.answers === 'object') { %>
+                                    <% Object.entries(sub.answers).forEach(([questionText, answerText]) => { %>
+                                        <div style="border-bottom: 1px solid #252525; padding-bottom: 6px;">
+                                            <div style="color: #ccc; font-size: 0.9rem; font-weight: bold;">❓ <%= questionText %></div>
+                                            <div style="color: #fff; font-size: 0.9rem; margin-top: 3px; padding-right: 15px;">💬 <%= answerText %></div>
+                                        </div>
+                                    <% }) %>
+                                <% } %>
+                            </div>
+                        </div>
+
+                        <!-- أزرار التحكم والإدارة للطلب -->
+                        <form action="/admin/activation-action" method="POST" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                            <input type="hidden" name="submissionId" value="<%= sub.id %>">
+                            
+                            <select name="roleId" class="form-select bg-secondary text-white border-warning" style="width: auto;" required>
+                                <option value="1525904514522026105">رتبة التفعيل الأساسية (اجتاز التفعيل)</option>
+                            </select>
+
+                            <button type="submit" name="action" value="accept" style="background: #059669; color: #fff; border: none; padding: 6px 15px; border-radius: 5px; cursor: pointer; font-weight: bold;">
+                                ✅ قبول وإعطاء الرتبة
+                            </button>
+                            
+                            <button type="submit" name="action" value="reject" style="background: #dc2626; color: #fff; border: none; padding: 6px 15px; border-radius: 5px; cursor: pointer; font-weight: bold;">
+                                ❌ رفض
+                            </button>
+                            
+                            <button type="submit" name="action" value="delete" style="background: #4b5563; color: #fff; border: none; padding: 6px 15px; border-radius: 5px; cursor: pointer;" onclick="return confirm('هل أنت متأكد من حذف هذا الطلب نهائياً؟')">
+                                🗑️ حذف
+                            </button>
+                        </form>
+                    </div>
+                <% }) %>
+            </div>
+        <% } else { %>
+            <p style="color: #888; text-align: center; padding: 20px;">لا توجد طلبات تفعيل جديدة حالياً.</p>
+        <% } %>
+    </div>
+
+    <!-- قسم إدارة التقديمات العامة في لوحة التحكم مع الأسئلة -->
+    <div class="card bg-dark text-white border-warning mb-4 p-4 shadow">
+        <h3 class="text-warning mb-3">📁 إدارة التقديمات العامة (مع الأسئلة)</h3>
+        
+        <!-- نموذج فتح تقديم جديد مع الأسئلة -->
+        <form action="/admin/add-application" method="POST" class="mb-4">
+            <div class="mb-3">
+                <label class="form-label">عنوان التقديم (مثال: تقديم الإدارة)</label>
+                <input type="text" name="title" class="form-control bg-secondary text-white border-0" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">وصف التقديم الشروط أو النبذة</label>
+                <textarea name="description" class="form-control bg-secondary text-white border-0" rows="2" required></textarea>
+            </div>
+
+            <hr class="border-warning">
+            <h5 class="text-info mb-3">أسئلة النموذج المطلوبة:</h5>
+            <div id="questionsContainer">
+                <div class="question-group mb-3 p-3 bg-secondary rounded border border-secondary">
+                    <label class="form-label">نص السؤال:</label>
+                    <input type="text" name="questions[]" class="form-control bg-dark text-white border-0 mb-2" placeholder="اكتب السؤال هنا..." required>
+                </div>
+            </div>
+            <button type="button" class="btn btn-sm btn-info mb-4" onclick="addQuestionField()">➕ إضافة سؤال آخر</button>
+            <br>
+            <button type="submit" class="btn btn-warning fw-bold w-100">فتح ونشر التقديم الجديد</button>
+        </form>
+
+        <hr class="border-warning">
+
+        <h5 class="text-info mt-3">التقديمات المفتوحة حالياً:</h5>
+        <% if (typeof appsList !== 'undefined' && appsList.length > 0) { %>
+            <div class="list-group mb-4">
+                <% appsList.forEach(app => { %>
+                    <div class="list-group-item bg-secondary text-white d-flex justify-content-between align-items-center border-warning mb-2 rounded">
+                        <div>
+                            <h6 class="mb-1 text-warning"><%= app.title %></h6>
+                            <p class="mb-1 small text-white-50"><%= app.description %></p>
+                            <% if (app.questions && app.questions.length > 0) { %>
+                                <span class="badge bg-dark text-info">عدد الأسئلة: <%= app.questions.length %></span>
+                            <% } %>
+                        </div>
+                        <form action="/admin/delete-application" method="POST" class="m-0">
+                            <input type="hidden" name="appId" value="<%= app.id %>">
+                            <button type="submit" class="btn btn-danger btn-sm">حذف / إغلاق</button>
+                        </form>
+                    </div>
+                <% }) %>
+            </div>
+        <% } else { %>
+            <p class="text-muted small">لا توجد تقديمات مفتوحة حالياً.</p>
+        <% } %>
+
+        <h5 class="text-info mt-4">طلبات الاعضاء الواردة:</h5>
+        <% if (typeof appSubmissions !== 'undefined' && Object.keys(appSubmissions).length > 0) { %>
+            <div class="table-responsive">
+                <table class="table table-dark table-bordered table-striped align-middle">
+                    <thead>
+                        <tr>
+                            <th>نوع التقديم</th>
+                            <th>آيدي ديسكورد</th>
+                            <th>الإجابات / التفاصيل</th>
+                            <th>التاريخ</th>
+                            <th>الحالة</th>
+                            <th>الإجراءات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% Object.keys(appSubmissions).forEach(key => { %>
+                            <% let sub = appSubmissions[key]; %>
+                            <tr>
+                                <td class="text-warning fw-bold"><%= sub.appTitle %></td>
+                                <td><code><%= sub.discordId %></code></td>
+                                <td>
+                                    <% if (sub.answers && typeof sub.answers === 'object') { %>
+                                        <% Object.keys(sub.answers).forEach(qKey => { %>
+                                            <div style="font-size: 13px; margin-bottom: 4px;">
+                                                <span class="text-info"><%= qKey %>:</span> 
+                                                <span class="text-white"><%= sub.answers[qKey] %></span>
+                                            </div>
+                                        <% }) %>
+                                    <% } else { %>
+                                        <%= sub.answers %>
+                                    <% } %>
+                                </td>
+                                <td class="small text-muted"><%= sub.date || 'غير محدد' %></td>
+                                <td>
+                                    <span class="badge <%= sub.status === 'مقبول' ? 'bg-success' : (sub.status === 'مرفوض' ? 'bg-danger' : 'bg-warning text-dark') %>">
+                                        <%= sub.status || 'قيد الانتظار' %>
+                                    </span>
+                                </td>
+                                <td>
+                                    <form action="/admin/submission-action" method="POST" class="d-flex gap-1 align-items-center flex-wrap">
+                                        <input type="hidden" name="submissionId" value="<%= sub.id %>">
+                                        <input type="text" name="roleId" placeholder="آيدي الرتبة" class="form-control form-control-sm bg-dark text-white border-secondary" style="width: 110px;">
+                                        <button type="submit" name="action" value="accept" class="btn btn-sm btn-success">قبول</button>
+                                        <button type="submit" name="action" value="reject" class="btn btn-sm btn-danger">رفض</button>
+                                        <button type="submit" name="action" value="delete" class="btn btn-sm btn-secondary">حذف</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+            </div>
+        <% } else { %>
+            <p class="text-muted small">لا توجد طلبات تقديم حتى الآن.</p>
+        <% } %>
+    </div>
+</div>
+
+<script>
+function addQuestionField() {
+    const container = document.getElementById('questionsContainer');
+    const div = document.createElement('div');
+    div.className = 'question-group mb-3 p-3 bg-secondary rounded border border-secondary';
+    div.innerHTML = `
+        <label class="form-label">نص السؤال:</label>
+        <input type="text" name="questions[]" class="form-control bg-dark text-white border-0 mb-2" placeholder="اكتب السؤال هنا..." required>
+        <button type="button" class="btn btn-sm btn-danger mt-2" onclick="this.parentElement.remove()">حذف هذا السؤال</button>
+    `;
+    container.appendChild(div);
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
